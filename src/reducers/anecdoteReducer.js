@@ -52,7 +52,6 @@
 
   export const updateVote = (anecdote) => {
     const newAnecdote = {...anecdote, votes: anecdote.votes+1};
-    console.log("update", newAnecdote);
     return async dispatch => {
       let response = await anecdotesService.update(newAnecdote);
       console.log(response)
